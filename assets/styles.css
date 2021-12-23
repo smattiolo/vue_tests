@@ -105,3 +105,11 @@ textarea {
   font-family: 'Qwitcher Grypen', cursive;
   font-size: 50px;
 }
+
+.red-line {
+  height: 8px;
+  background-color: #ab0000;
+  position: absolute;
+  right: 30px;
+  top: 180px;
+}
