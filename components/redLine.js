@@ -18,3 +18,5 @@ app.component('red-line', {
     },
   },
 });
+
+// asdasd
