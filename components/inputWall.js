@@ -11,10 +11,14 @@ app.component('input-wall', {
             cols="35"
             @input="handleChange($event.target.value)" />
     </div>`,
-  
-    methods: {
-    handleChange(inputValue) {
+
+  methods: {
+    // handleChange(inputValue) {
+    //   this.$emit('input-wall-value', inputValue);
+    // },
+
+    handleChange: _.debounce(function (inputValue) {
       this.$emit('input-wall-value', inputValue);
-    },
+    }, 1000),
   },
 });
