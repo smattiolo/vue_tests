@@ -5,6 +5,7 @@ app.component('output-wall', {
       required: true,
     },
   },
+  
   template: /* html */ `
     <div class="output-container">
         <p class="output-text">{{ text }}</p>

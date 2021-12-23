@@ -11,7 +11,8 @@ app.component('input-wall', {
             cols="35"
             @input="handleChange($event.target.value)" />
     </div>`,
-  methods: {
+  
+    methods: {
     handleChange(inputValue) {
       this.$emit('input-wall-value', inputValue);
     },

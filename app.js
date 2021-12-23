@@ -1,15 +1,19 @@
 const app = Vue.createApp({
   data() {
+    console.log('test');
+
     return {
       time: '',
       outputText: '',
     };
   },
+
   methods: {
     writeText(inputValue) {
       this.outputText = inputValue;
     },
   },
+
   computed: {
     getCurrentTime() {
       setInterval(() => {

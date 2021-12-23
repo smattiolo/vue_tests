@@ -5,16 +5,33 @@ app.component('red-line', {
       require: true,
     },
   },
+
+  data() {
+    return {
+      linePixels: '8px',
+    };
+  },
+
   template: /* html */ `
     <div class="red-line" :style="{ width: linePixels }"></div>`,
 
-  computed: {
+  /*   computed: {
     linePixels() {
       const seconds = parseInt(this.time.slice(-2));
 
       const pixels = seconds * 5 + 8;
 
       return pixels + 'px';
+    },
+  }, */
+
+  watch: {
+    time: function () {
+      const seconds = parseInt(this.time.slice(-2));
+
+      const pixels = seconds * 5 + 8;
+
+      this.linePixels = pixels + 'px';
     },
   },
 });

@@ -4,6 +4,7 @@ app.component('bar', {
       dynamicWidth: 120,
     };
   },
+  
   template: /* html */ `
     <div class="bar" :style="{ width: dynamicWidth + 'px' }">
         <button class="btn plus-btn" @click="addBar">
@@ -13,7 +14,8 @@ app.component('bar', {
             <p class="btn-text minus-btn-text">-</p>
         </button>
     </div>`,
-  methods: {
+  
+    methods: {
     addBar() {
       this.dynamicWidth += 30;
     },
@@ -23,6 +25,7 @@ app.component('bar', {
       }
     },
   },
+  
   computed: {
     hideButton() {
       if (this.dynamicWidth === 120) {

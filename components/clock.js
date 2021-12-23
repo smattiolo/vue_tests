@@ -5,6 +5,7 @@ app.component('clock', {
       required: true,
     },
   },
+  
   template: /* html */ `
         <div class="clock-container">
             <p class="clock-text">{{ time }}</p>
