@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Tests</title>
+
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <stripe></stripe>
+      <clock v-on:load="getCurrentTime" :time="time"></clock>
+      <bar></bar>
+      <input-wall @input-wall-value="writeText"></input-wall>
+      <output-wall :text="outputText"></output-wall>
+      <stripe class="bottom"></stripe>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="./components/stripe.js"></script>
+    <script src="./components/clock.js"></script>
+    <script src="./components/bar.js"></script>
+    <script src="./components/inputWall.js"></script>
+    <script src="./components/outputWall.js"></script>
+
+    <script>
+      const mountedApp = app.mount('#app');
+    </script>
+  </body>
+</html>
