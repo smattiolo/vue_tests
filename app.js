@@ -1,7 +1,5 @@
 const app = Vue.createApp({
   data() {
-    console.log('test');
-
     return {
       time: '',
       outputText: '',

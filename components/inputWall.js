@@ -13,10 +13,6 @@ app.component('input-wall', {
     </div>`,
 
   methods: {
-    // handleChange(inputValue) {
-    //   this.$emit('input-wall-value', inputValue);
-    // },
-
     handleChange: _.debounce(function (inputValue) {
       this.$emit('input-wall-value', inputValue);
     }, 1000),
